@@ -1,41 +1,80 @@
-# Arduino Motor Controller - Ponte H (L298N)
+# 🤖 Carro Autônomo com Desvio de Obstáculos (Arduino + L293D + HC-SR04)
 
-Este projeto em Arduino controla dois motores DC usando uma ponte H (como o L298N), permitindo movimento para frente, para trás, parada e giros.
+Este projeto é um **carro autônomo simples** que utiliza um sensor ultrassônico para detectar obstáculos e motores controlados por um driver L293D. Ele simula o comportamento de um robô móvel autônomo, desviando de obstáculos de forma inteligente e emitindo um alerta sonoro com buzzer.
 
-## 🔌 Conexões
+---
 
-### Motor A:
-- IN1 → D2
-- IN2 → D3
-- ENA → D11 (PWM)
+## 🚗 Funcionalidades
 
-### Motor B:
-- IN3 → D4
-- IN4 → D5
-- ENB → D10 (PWM)
+- Detecta obstáculos usando o sensor HC-SR04
+- Anda automaticamente para frente
+- Executa uma manobra de ré + curva ao detectar obstáculo
+- Emite um alerta sonoro (buzzer)
 
-## ⚙️ Funcionalidade
+---
 
-O código faz o seguinte em um loop contínuo:
+## 🛠️ Componentes Utilizados
 
-1. Anda para frente por 2 segundos
-2. Anda para trás por 2 segundos
-3. Gira para a direita por 1.5 segundo
-4. Para por 2 segundos
+| Componente            | Quantidade |
+|-----------------------|------------|
+| Arduino UNO R3        | 1          |
+| L293D (Driver de Motor)| 1         |
+| Sensor Ultrassônico HC-SR04 | 1     |
+| Motores DC com rodas  | 2          |
+| Buzzer                | 1          |
+| Fonte 9V              | 1          |
+| Protoboard + Jumpers  | Vários     |
 
-## 🧠 Código
+---
 
-O controle de velocidade é feito com `analogWrite`, e a direção com `digitalWrite`.
+## ⚙️ Esquema do Circuito
 
-## 🛠️ Requisitos
+> 🔽 *Clique na imagem para ampliar.*
 
-- Arduino UNO ou similar
-- Driver de motores L298N
-- 2 motores DC
-- Fonte externa para motores 
-- IDE do Arduino
 
-## 📸 Imagem
-![Captura de tela 2025-06-10 103104](https://github.com/user-attachments/assets/2ed298de-0328-48f0-a256-9a1e34a41cae)
 
+> 💡 Diagrama desenvolvido no [Tinkercad](https://www.tinkercad.com)
+
+---
+
+## 🎥 Demonstração (vídeo)
+
+> [🔗 Link do vídeo no YouTube](https://youtu.be/seu-video-aqui) *(suba um vídeo mostrando o robô funcionando!)*
+
+---
+
+## 💻 Código-Fonte
+
+O código está disponível na pasta `/src` ou abaixo:
+
+[🔗 Ver código completo](#)
+
+Principais funções:
+- `medirDistancia()`: lê a distância do HC-SR04
+- `andarFrente()`, `andarRe()`, `girarEsquerda()`: controle dos motores
+- `manobraDesvio()`: lógica de fuga automática
+- `buzzerON()` / `OFF()`: alerta sonoro
+
+---
+
+
+## 📚 O que aprendi
+
+- Programação de lógica condicional com Arduino
+- Controle de motores DC com o CI L293D
+- Leitura de distância com sensor HC-SR04
+- Modularização de código e boas práticas
+- Princípios de robótica móvel
+- Simulação no Tinkercad
+- 
+---
+
+## 🔧 Tecnologias e Ferramentas
+
+- Arduino IDE
+- Tinkercad
+- C/C++ para embarcados
+- Protoboard e eletrônica básica
+
+---
 
