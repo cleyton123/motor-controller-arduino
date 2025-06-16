@@ -31,23 +31,19 @@ Este projeto é um **carro autônomo simples** que utiliza um sensor ultrassôni
 
 > 🔽 *Clique na imagem para ampliar.*
 
-
-
-> 💡 Diagrama desenvolvido no [Tinkercad](https://www.tinkercad.com)
+[controle de motor com L293D.pdf](https://github.com/user-attachments/files/20762714/controle.de.motor.com.L293D.pdf)
 
 ---
 
 ## 🎥 Demonstração (vídeo)
 
-> [🔗 Link do vídeo no YouTube](https://youtu.be/seu-video-aqui) *(suba um vídeo mostrando o robô funcionando!)*
+https://www.youtube.com/watch?v=L7TIliMiw9Y
 
 ---
 
 ## 💻 Código-Fonte
 
 O código está disponível na pasta `/src` ou abaixo:
-
-[🔗 Ver código completo](#)
 
 Principais funções:
 - `medirDistancia()`: lê a distância do HC-SR04
